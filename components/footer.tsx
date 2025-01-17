@@ -1,5 +1,4 @@
-'use client'; 
-
+"use client";
 import { FormEvent, JSX } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
@@ -22,7 +21,7 @@ export function Footer(): JSX.Element {
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     // Newsletter abone olma işlemi
-    console.log('Newsletter abone olundu')
+    console.log('Subscribed')
   }
 
   return (
@@ -30,15 +29,15 @@ export function Footer(): JSX.Element {
       <div className="container grid gap-8 py-8 md:grid-cols-2 lg:grid-cols-4">
         <div className="flex flex-col gap-2">
           <Link href="/" className="flex items-center space-x-2">
-            <Image src="/logo.png" alt="Karabakh Logo" width={32} height={32} />
+            <Image src="/Sapand (2).jpg" alt="Karabakh Logo" width={32} height={32} />
             <span className="text-xl font-bold">Karabakh</span>
           </Link>
           <p className="text-sm text-muted-foreground">
-            Our Mountains, Our Identity
+            Our Mountains, Our Identities
           </p>
         </div>
         <div className="grid gap-2">
-          <h3 className="text-sm font-medium">Programs</h3>
+          <h3 className="text-sm font-medium">Programlar</h3>
           <nav className="grid gap-2">
             {programLinks.map((link) => (
               <Link
@@ -52,7 +51,7 @@ export function Footer(): JSX.Element {
           </nav>
         </div>
         <div className="grid gap-2">
-          <h3 className="text-sm font-medium">Company</h3>
+          <h3 className="text-sm font-medium">Şirket</h3>
           <nav className="grid gap-2">
             {companyLinks.map((link) => (
               <Link
@@ -66,14 +65,14 @@ export function Footer(): JSX.Element {
           </nav>
         </div>
         <div className="grid gap-2">
-          <h3 className="text-sm font-medium">Newsletter</h3>
+          <h3 className="text-sm font-medium">Bülten</h3>
           <p className="text-sm text-muted-foreground">
-            Subscribe to our newsletter for updates
+            Subscribe for Updates
           </p>
           <form onSubmit={handleSubmit} className="flex gap-2">
             <Input
               type="email"
-              placeholder="Enter your email"
+              placeholder="E-Mail Adress"
               className="max-w-[220px]"
               required
             />
@@ -85,8 +84,9 @@ export function Footer(): JSX.Element {
       </div>
       <div className="border-t">
         <div className="container flex flex-col gap-4 py-6 text-sm text-muted-foreground md:flex-row md:gap-6">
-          <p>© {new Date().getFullYear()} Karabakh. All rights reserved.</p>
-          </div>
-          </div>
-          </footer>
-   )}
+          <p>© {new Date().getFullYear()} Karabakh. All Rights Reserved.</p>
+        </div>
+      </div>
+    </footer>
+  )
+}

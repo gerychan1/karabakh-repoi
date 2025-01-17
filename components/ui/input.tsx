@@ -20,3 +20,8 @@ const Input = React.forwardRef<HTMLInputElement, React.ComponentProps<"input">>(
 Input.displayName = "Input"
 
 export { Input }
+// Server-side metadata export
+export const metadata = {
+  title: 'Karabakh - Innovate. Accelerate. Defend.',
+  description: 'Our Mountains, Our Identity - Defense Technology Innovation Hub',
+};

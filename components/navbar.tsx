@@ -1,20 +1,20 @@
 'use client';
-import * as React from 'react'
-import Link from 'next/link'
-import Image from 'next/image'
-import { cn } from '@/lib/utils'
-import type { Program } from '@/types/index'
+
+import * as React from 'react';
+import Link from 'next/link';
+import Image from 'next/image';
+import { cn } from '@/lib/utils';
+import type { Program } from '@/types/index';
 import {
   NavigationMenu,
   NavigationMenuContent,
   NavigationMenuItem,
-  NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
-} from '@/components/ui/navigation-menu'
-import * as button from '@/components/ui/button'
-import { JSX } from 'react'
+} from '@/components/ui/navigation-menu';
+import * as button from '@/components/ui/button';
+import { JSX } from 'react';
 
 const programs: Program[] = [
   {
@@ -27,14 +27,14 @@ const programs: Program[] = [
     href: '/programs/acceleration',
     description: 'Scale your defense technology startup with our acceleration program.',
   },
-]
+];
 
 export function Navbar(): JSX.Element {
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center">
         <Link href="/" className="flex items-center space-x-2">
-          <Image src="/logo.png" alt="Karabakh Logo" width={32} height={32} />
+          <Image src="/Sapand (2).jpg" alt="Karabakh Logo" width={32} height={32} />
           <span className="text-xl font-bold">Karabakh</span>
         </Link>
         <NavigationMenu className="ml-6">
@@ -57,23 +57,17 @@ export function Navbar(): JSX.Element {
             </NavigationMenuItem>
             <NavigationMenuItem>
               <Link href="/about" legacyBehavior passHref>
-                <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                  About
-                </NavigationMenuLink>
+                <a className={navigationMenuTriggerStyle()}>About</a>
               </Link>
             </NavigationMenuItem>
             <NavigationMenuItem>
               <Link href="/news" legacyBehavior passHref>
-                <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                  News
-                </NavigationMenuLink>
+                <a className={navigationMenuTriggerStyle()}>News</a>
               </Link>
             </NavigationMenuItem>
             <NavigationMenuItem>
               <Link href="/contact" legacyBehavior passHref>
-                <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                  Contact
-                </NavigationMenuLink>
+                <a className={navigationMenuTriggerStyle()}>Contact</a>
               </Link>
             </NavigationMenuItem>
           </NavigationMenuList>
@@ -85,18 +79,18 @@ export function Navbar(): JSX.Element {
         </div>
       </div>
     </header>
-  )
+  );
 }
 
 interface ListItemProps extends React.ComponentPropsWithoutRef<'a'> {
-  title: string
+  title: string;
 }
 
 const ListItem = React.forwardRef<React.ElementRef<'a'>, ListItemProps>(
   ({ className, title, children, ...props }, ref) => {
     return (
       <li>
-        <NavigationMenuLink asChild>
+        <Link href={props.href ?? '#'} legacyBehavior passHref>
           <a
             ref={ref}
             className={cn(
@@ -110,9 +104,9 @@ const ListItem = React.forwardRef<React.ElementRef<'a'>, ListItemProps>(
               {children}
             </p>
           </a>
-        </NavigationMenuLink>
+        </Link>
       </li>
-    )
+    );
   }
-)
-ListItem.displayName = 'ListItem'
+);
+ListItem.displayName = 'ListItem';

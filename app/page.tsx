@@ -1,3 +1,4 @@
+"use client";
 import Link from 'next/link'
 import Image from 'next/image'
 import { Button } from '@/components/ui/button'
@@ -8,28 +9,29 @@ export default function Home() {
       <section className="relative">
         <div className="absolute inset-0 bg-gradient-to-r from-background to-background/50" />
         <div className="container relative flex min-h-[800px] flex-col items-center justify-center gap-4 text-center">
+          
           <Image
-            src="/logo.png"
+            src="/Sapand (2).jpg"
             alt="Karabakh Logo"
             width={120}
             height={120}
             className="mb-8"
           />
           <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl">
-            Innovate. Accelerate. Defend.
+            Innovate.Accelerate.Defend.
           </h1>
           <p className="max-w-[600px] text-muted-foreground sm:text-xl">
-            Join us in shaping the future of defense technology innovation.
+            Join Us for reshaping Military Defense Technologies' Future.
           </p>
           <div className="flex gap-4">
             <Button asChild size="lg">
               <Link href="/programs/incubation" passHref>
-                <a>Apply for Incubation</a>
+                Apply to Incubation Program
               </Link>
             </Button>
             <Button asChild variant="outline" size="lg">
               <Link href="/programs/acceleration" passHref>
-                <a>Apply for Acceleration</a>
+                Apply to Acceleration Program
               </Link>
             </Button>
           </div>
@@ -43,12 +45,11 @@ export default function Home() {
               Our Mission
             </h2>
             <p className="max-w-[700px] text-muted-foreground sm:text-xl">
-              We are dedicated to nurturing innovation in military defense technology,
-              supporting startups and entrepreneurs in developing cutting-edge solutions.
+              Our Purpose is supporting to Innovation at Military Defense Technologies.
             </p>
             <Button asChild variant="outline">
               <Link href="/about" passHref>
-                <a>Learn More About Us</a>
+                Information About Us
               </Link>
             </Button>
           </div>
