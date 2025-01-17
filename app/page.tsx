@@ -23,13 +23,13 @@ export default function Home() {
           </p>
           <div className="flex gap-4">
             <Button asChild size="lg">
-              <Link href="/programs/incubation">
-                Apply for Incubation
+              <Link href="/programs/incubation" passHref>
+                <a>Apply for Incubation</a>
               </Link>
             </Button>
             <Button asChild variant="outline" size="lg">
-              <Link href="/programs/acceleration">
-                Apply for Acceleration
+              <Link href="/programs/acceleration" passHref>
+                <a>Apply for Acceleration</a>
               </Link>
             </Button>
           </div>
@@ -47,7 +47,9 @@ export default function Home() {
               supporting startups and entrepreneurs in developing cutting-edge solutions.
             </p>
             <Button asChild variant="outline">
-              <Link href="/about">Learn More About Us</Link>
+              <Link href="/about" passHref>
+                <a>Learn More About Us</a>
+              </Link>
             </Button>
           </div>
         </div>

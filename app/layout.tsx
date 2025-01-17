@@ -15,6 +15,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: PropsWithChildren): JSX.Element {
   return (
     <html lang="en" className="scroll-smooth">
+      <head />
       <body className={inter.className}>
         <div className="relative flex min-h-screen flex-col">
           <Navbar />

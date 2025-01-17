@@ -1,3 +1,5 @@
+'use client'; 
+
 import { FormEvent, JSX } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
@@ -19,8 +21,8 @@ const programLinks: FooterLink[] = [
 export function Footer(): JSX.Element {
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-    // Handle newsletter subscription
-    console.log('Newsletter subscription submitted')
+    // Newsletter abone olma işlemi
+    console.log('Newsletter abone olundu')
   }
 
   return (
@@ -84,16 +86,7 @@ export function Footer(): JSX.Element {
       <div className="border-t">
         <div className="container flex flex-col gap-4 py-6 text-sm text-muted-foreground md:flex-row md:gap-6">
           <p>© {new Date().getFullYear()} Karabakh. All rights reserved.</p>
-          <nav className="flex gap-4 md:ml-auto">
-            <Link href="/privacy" className="hover:underline">
-              Privacy Policy
-            </Link>
-            <Link href="/terms" className="hover:underline">
-              Terms of Service
-            </Link>
-          </nav>
-        </div>
-      </div>
-    </footer>
-  )
-}
+          </div>
+          </div>
+          </footer>
+   )}
